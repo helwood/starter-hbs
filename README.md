@@ -1,4 +1,4 @@
-# Starter Files for Prototypes
+# Starter Files for Prototypes with Handlebars
 
 1. Clone, rename, update package.json to match project.  
 2. Update build.json with project name.

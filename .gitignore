@@ -11,3 +11,4 @@ dump.rdb
 static/
 build/
 bower_components/
+temp/

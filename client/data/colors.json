@@ -1,0 +1,44 @@
+{
+  "colors": [
+    {
+      "color": "Royal Blue",
+      "hex": "0471af",
+      "type": "Primary"
+    },
+    {
+      "color": "Lowes Blue",
+      "hex": "004990",
+      "type": "Secondary"
+    },
+    {
+      "color": "Teal Blue",
+      "hex": "15b6e5",
+      "type": "Tertiary"
+    },
+    {
+      "color": "White",
+      "hex": "ffffff",
+      "type": "Quarterary"
+    },
+    {
+      "color": "Lighter Grey",
+      "hex": "f2f2f2",
+      "type": "Quinary"
+    },
+    {
+      "color": "Light Grey",
+      "hex": "cccccc",
+      "type": "Senary"
+    },
+    {
+      "color": "Dark Grey",
+      "hex": "5d5d5d",
+      "type": "Septenary"
+    },
+    {
+      "color": "Darker Grey",
+      "hex": "333333",
+      "type": "Octonary"
+    }
+  ]
+}

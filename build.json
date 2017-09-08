@@ -1,0 +1,20 @@
+{
+	"preCompileTemplates": true,
+	"srcDir": "client",
+	"jsDir": "client/js",
+	"lessDir": "client/less",
+	"templatesDir": "client/templates",
+	"build": [
+		{
+			"name": "projectname",
+			"title": "Project Name",
+			"js": [
+				"temp/js/templates.js",
+				"client/js/main.js"
+			],
+			"css": [
+				"client/less/build.less"
+			]
+		}
+	]
+}

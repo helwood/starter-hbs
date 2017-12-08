@@ -22,6 +22,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-wrap": "^0.13.0",
     "handlebars": "^4.0.10",
+    "jshint": "^2.9.5",
     "merge-stream": "^1.0.1",
     "path": "^0.12.7",
     "scaffold": "git+ssh://git@vmlnxatlstash.lowes.com:42000/di/scaffold.git#develop"

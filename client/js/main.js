@@ -1,19 +1,19 @@
 $(function(){
 
-	$.ajax({
-    	type: "GET",
-    	url: "data/colors.json",
-    	dataType: "json",
-    	success: function(data){
-    		console.log(data);
-    		var partialThing = HBS.partials.partial;
-			var partialContent = $(partialThing(data));
-			$(".theme-container").html(partialContent);
-    	},
-    	error: function (request, status, error) {
-        	console.log("error: " + error);
-    	}
-	});
+	// $.ajax({
+ //    	type: "GET",
+ //    	url: "data/colors.json",
+ //    	dataType: "json",
+ //    	success: function(data){
+ //    		console.log(data);
+ //    		var partialThing = HBS.partials.partial;
+	// 		var partialContent = $(partialThing(data));
+	// 		$(".theme-container").html(partialContent);
+ //    	},
+ //    	error: function (request, status, error) {
+ //        	console.log("error: " + error);
+ //    	}
+	// });
 
 	// var characterTemplate = $('#character-template').html();
 	// 		var compiledCharacterTemplate = Handlebars.compile(characterTemplate);

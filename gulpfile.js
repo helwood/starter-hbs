@@ -122,6 +122,9 @@ gulp.task("local",["templates"], () => {
 
 		gulp.src('client/data/*.json')
 			.pipe(gulp.dest('dist/data'));
+
+		gulp.src('client/images/**/*')
+			.pipe(gulp.dest('dist/images'));
 	}
 	gulp.watch([`${buildConfig.jsDir}/**/*.js`,`${buildConfig.lessDir}/**/*.less`,`${buildConfig.templatesDir}/**/*.hbs`],["local"]);
 });

@@ -3,7 +3,8 @@
 1. Clone, rename, update package.json to match project.  
 2. Update build.json with project name.
 3. Run `npm install` to get all needed modules.
-4. Run `gulp` to start local sever and compile build files.
+4. Run `bower install` to get Scaffold.
+5. Run `gulp` to start local sever and compile build files.
 
 
 

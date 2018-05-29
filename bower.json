@@ -1,0 +1,14 @@
+{
+  "name": "scaffold-docs",
+  "description": "",
+  "main": "server.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static"
+  ],
+  "dependencies": {
+    "scaffold": "git+ssh://git@vmlnxatlstash.lowes.com:42000/di/scaffold.git#develop"
+  }
+}

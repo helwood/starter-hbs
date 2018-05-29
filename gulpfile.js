@@ -117,7 +117,7 @@ gulp.task("local",["templates"], () => {
 			}))
 			.pipe(gulp.dest(baseOutputDir));
 
-		gulp.src('node_modules/Scaffold/src/fonts/**/*')
+		gulp.src('bower_components/Scaffold/src/fonts/**/*')
 			.pipe(gulp.dest(fontOutputDir));
 
 		gulp.src('client/data/*.json')

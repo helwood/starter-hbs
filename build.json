@@ -6,8 +6,8 @@
 	"templatesDir": "client/templates",
 	"build": [
 		{
-			"name": "projectname",
-			"title": "Project Name",
+			"name": "dotcom",
+			"title": "Dotcom",
 			"js": [
 				"temp/js/templates.js",
 				"client/js/main.js"

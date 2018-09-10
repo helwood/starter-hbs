@@ -6,9 +6,11 @@
 	"templatesDir": "client/templates",
 	"build": [
 		{
-			"name": "dotcom",
-			"title": "Dotcom",
+			"name": "starter",
+			"title": "Starter",
 			"js": [
+				"node_modules/jquery/dist/jquery.js",
+				"node_modules/handlebars/dist/handlebars.js",
 				"temp/js/templates.js",
 				"client/js/main.js"
 			],

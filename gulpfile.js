@@ -21,6 +21,8 @@ const cssOutputDir = buildConfig.cssOutputDir || "dist/css";
 const jsOutputDir = buildConfig.jsOutputDir || "dist/js";
 const baseOutputDir = buildConfig.baseOutputDir || "dist/";
 const fontOutputDir = buildConfig.fontOutputDir || "dist/fonts";
+const projectName = buildConfig.build[0]["name"];
+const templateNamespace = projectName.replace(/^\w/, c => c.toUpperCase()) + ".templates";
 
 // Refresh brower on changes
 var browserSync = require('browser-sync').create();
@@ -41,9 +43,9 @@ gulp.task("templates",["clean"], () => {
 	if (typeof buildConfig.preCompileTemplates !== "undefined" && buildConfig.preCompileTemplates === true) {
         const partials = gulp.src(`${buildConfig.templatesDir}/partials/**/*.hbs`)
             .pipe(handlebars({
-                handlebars: Handlebars
-            }))
-            .pipe(wrap("HBS.registerPartial(<%= processPartialName(file.relative) %>, HBS.template(<%= contents %>));", {}, {
+        		handlebars: require('Handlebars')
+        	}))
+            .pipe(wrap("Handlebars.registerPartial(<%= processPartialName(file.relative) %>, Handlebars.template(<%= contents %>));", {}, {
                 imports: {
                     processPartialName: (fileName) => {
                         return JSON.stringify(path.basename(fileName, ".js"));
@@ -53,15 +55,16 @@ gulp.task("templates",["clean"], () => {
 
     	const templates = gulp.src([`${buildConfig.templatesDir}/**/*.hbs`, `!${buildConfig.templatesDir}/**/partials/*.hbs`])
         	.pipe(handlebars({
-            	handlebars: Handlebars
+        		handlebars: require('Handlebars')
         	}))
-        	.pipe(wrap("HBS.template(<%= contents %>)"))
+        	.pipe(wrap("Handlebars.template(<%= contents %>)"))
         	.pipe(declare({
-            	namespace: "Genesis.templates",
+            	namespace: templateNamespace,
             	noRedeclare: true // Avoid duplicate declarations
         	}));
 
-        return merge(partials, templates)
+        // return merge(partials, templates)
+        return (templates)
             .pipe(concat("templates.js"))
             .pipe(gulp.dest("temp/js/"));
     } else {
@@ -117,7 +120,7 @@ gulp.task("local",["templates"], () => {
 			}))
 			.pipe(gulp.dest(baseOutputDir));
 
-		gulp.src('bower_components/Scaffold/src/fonts/**/*')
+		gulp.src('client/fonts/**/*')
 			.pipe(gulp.dest(fontOutputDir));
 
 		gulp.src('client/data/*.json')
